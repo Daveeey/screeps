@@ -3,7 +3,7 @@ var roleUpgrader = require('role.upgrader');
 var roleBuilder = require('role.builder');
 
 module.exports.loop = function () {
-	
+	console.log('There goes another tick');
     var creepCount = new Array();
 	creepCount['harvester'] = 0;
 	creepCount['upgrader'] = 0;
