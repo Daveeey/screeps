@@ -3,7 +3,7 @@
     /** @param {Creep} creep **/
     run: function(creep) {
 	    if(creep.carry.energy == 0) {
-            if(!Game.spawns.Spawn1.transferEnergy(creep, creep.carryCapacity)) {
+            if(!Creep.withdraw(creep.carryCapacity)) {
                 creep.moveTo(Game.spawns.Spawn1);
             }
         }
