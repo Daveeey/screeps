@@ -3,8 +3,9 @@
     /** @param {Creep} creep **/
     run: function(creep) {
 	    if(creep.carry.energy == 0) {
-            if(!creep.withdraw(creep.carryCapacity)) {
-                creep.moveTo(Game.spawns.Spawn1);
+            var sources = creep.room.find(FIND_SOURCES);
+            if(creep.harvest(sources[1]) == ERR_NOT_IN_RANGE) {
+                creep.moveTo(sources[1], {visualizePathStyle: {stroke: '#ffaa00'}});
             }
         }
         else {
