@@ -38,12 +38,12 @@ module.exports.loop = function () {
             console.log('Created new Harvester ');
            
         }
-        else if(creepCount['upgrader'] < 4){
+        else if(creepCount['upgrader'] < 2){
             Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Upgrader' + Game.time, {memory: {role: 'upgrader'}});
             console.log('Created new Builder ');
            
         }
-        else if(creepCount['builder'] < 4){
+        else if(creepCount['builder'] < 2){
             Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Builder' + Game.time, {memory: {role: 'builder'}});
             console.log('Created new Upgrader ');
             
