@@ -36,17 +36,17 @@ module.exports.loop = function () {
         if(creepCount['harvester'] < 4){
             Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Harvester' + Game.time, {memory: {role: 'harvester'}});
             console.log('Created new Harvester ');
-            Game.spawns['Spawn1'].say('Building Harvester');
+           
         }
         else if(creepCount['upgrader'] < 4){
             Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Upgrader' + Game.time, {memory: {role: 'upgrader'}});
             console.log('Created new Builder ');
-            Game.spawns['Spawn1'].say('Building Upgrader');
+           
         }
         else if(creepCount['builder'] < 4){
             Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Builder' + Game.time, {memory: {role: 'builder'}});
             console.log('Created new Upgrader ');
-            Game.spawns['Spawn1'].say('Building Builder');
+            
         }
     }
     
