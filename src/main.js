@@ -39,7 +39,7 @@ module.exports.loop = function () {
            
         }
         else if(creepCount['upgrader'] < 2){
-            Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Upgrader' + Game.time, {memory: {role: 'upgrader'}});
+            Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Upgrader' + Game.time, {memory: {role: 'upgrader', upgrading: false}});
             console.log('Created new Builder ');
            
         }
