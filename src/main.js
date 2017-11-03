@@ -33,7 +33,7 @@ module.exports.loop = function () {
     
     if(Game.spawns['Spawn1'].energy === Game.spawns['Spawn1'].energyCapacity && !Game.spawns['Spawn1'].spawning){
         // We can build a new unit - we decide based on priority
-        if(creepCount['harvester'] < 4){
+        if(creepCount['harvester'] < 3){
             Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Harvester' + Game.time, {memory: {role: 'harvester'}});
             console.log('Created new Harvester ');
            
@@ -43,7 +43,7 @@ module.exports.loop = function () {
             console.log('Created new Builder ');
            
         }
-        else if(creepCount['builder'] < 2){
+        else if(creepCount['builder'] < 4){
             Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Builder' + Game.time, {memory: {role: 'builder'}});
             console.log('Created new Upgrader ');
             
