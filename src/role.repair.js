@@ -25,7 +25,7 @@ var roleRepair = {
         // }
          if(!creep.memory.repairing) {
              var source = creep.room.find(FIND_SOURCES);
-             if(source == ERR_NOT_IN_RANGE) {
+             if(source[0] == ERR_NOT_IN_RANGE) {
                  creep.moveTo(source[0], {visualizePathStyle: {stroke: '#ffaa00'}});
                  console.log('Moving to source');
              }
