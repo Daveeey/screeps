@@ -32,11 +32,11 @@ var roleRepair = {
         else {
             var targets = creep.room.find(Game.STRUCTURES, {
                 filter: function(structure) {
-                    return structure.hits < structure.hitsMax / 2;
+                    return structure.hits < structure.hitsMax;
                 }
             });
 
-            //targets.sort((a,b) => a.hits - b.hits);
+            targets.sort((a,b) => a.hits - b.hits);
 
             if(targets.length > 0) {
                 console.log('found targets');
@@ -47,7 +47,6 @@ var roleRepair = {
             } else {
                 console.log('No Targets');
                 console.log(targets);
-                creep.moveTo(Game.spawns['Spawn1']);
             }
         }
     }
