@@ -35,4 +35,4 @@ var roleRepair = {
     }
 };
 
-module.exports = roleUpgrader;
+module.exports = roleRepair;
