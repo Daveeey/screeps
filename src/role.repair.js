@@ -22,7 +22,6 @@ var roleRepair = {
                 if(creep.transfer(EnergyStructures) == ERR_NOT_IN_RANGE) {
                     creep.moveTo(EnergyStructures, {visualizePathStyle: {stroke: '#ffaa00'}})
                 }
-            }
         }
         else {
             var targets = creep.room.find(FIND_STRUCTURES, {
