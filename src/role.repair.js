@@ -4,8 +4,8 @@ var roleRepair = {
     run: function(creep) {
 
 
-        if(creep.memory.upgrading && creep.carry.energy == 0) {
-            creep.memory.upgrading = false;
+        if(creep.memory.repairing && creep.carry.energy == 0) {
+            creep.memory.repairing = false;
             creep.say('harvest');
         }
 
