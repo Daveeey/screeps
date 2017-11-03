@@ -20,11 +20,13 @@ var roleRepair = {
             }
         }
         else {
-            const targets = creep.room.find(FIND_STRUCTURES, {
-                    filter: object => object.hits < object.hitsMax
+            var targets = creep.pos.findNearest(Game.STRUCTURES, {
+                filter: function(structure) {
+                    return structure.hits < structure.hitsMax / 2;
+                }
             });
 
-            targets.sort((a,b) => a.hits - b.hits);
+            //targets.sort((a,b) => a.hits - b.hits);
 
             if(targets.length > 0) {
                 if(creep.repair(targets[0]) == ERR_NOT_IN_RANGE) {
