@@ -14,7 +14,7 @@ var roleRepair = {
             creep.say('repairing');
         }
         if(!creep.memory.repairing) {
-            var source = creep.room.findNearest(Game.SOURCES_ACTIVE);
+            var source = creep.pos.findNearest(Game.SOURCES_ACTIVE);
             if(source == ERR_NOT_IN_RANGE) {
                 creep.moveTo(source, {visualizePathStyle: {stroke: '#ffaa00'}});
             }
