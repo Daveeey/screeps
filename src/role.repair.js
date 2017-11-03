@@ -15,22 +15,21 @@ var roleRepair = {
             creep.memory.harvesting = false;
             creep.say('repairing');
         }
-        if(!creep.memory.repairing) {
-            var source = creep.pos.findClosestByPath(FIND_SOURCES);
-            console.log(source);
-            if(creep.harvest(source) == ERR_NOT_IN_RANGE) {
-                creep.moveTo(source, {visualizePathStyle: {stroke: '#ffaa00'}});
-                console.log('Moving to source');
-            }
-        }
-        //  if(!creep.memory.repairing) {
-        //      var source = creep.room.find(FIND_SOURCES);
-        //      console.log(source[0]);
-        //      if(source == ERR_NOT_IN_RANGE) {
-        //          creep.moveTo(source[0], {visualizePathStyle: {stroke: '#ffaa00'}});
-        //          console.log('Moving to source');
-        //      }
-        //  }
+        // if(!creep.memory.repairing) {
+        //     var source = creep.pos.findClosestByPath(FIND_SOURCES);
+        //     console.log(source);
+        //     if(creep.harvest(source) == ERR_NOT_IN_RANGE) {
+        //         creep.moveTo(source, {visualizePathStyle: {stroke: '#ffaa00'}});
+        //         console.log('Moving to source');
+        //     }
+        // }
+         if(!creep.memory.repairing) {
+             var source = creep.room.find(FIND_SOURCES);
+             if(source == ERR_NOT_IN_RANGE) {
+                 creep.moveTo(source[0], {visualizePathStyle: {stroke: '#ffaa00'}});
+                 console.log('Moving to source');
+             }
+         }
         else {
             var targets = creep.pos.findClosestByPath(Game.STRUCTURES, {
                 filter: function(structure) {
