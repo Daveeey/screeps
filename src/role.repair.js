@@ -30,7 +30,7 @@ var roleRepair = {
              }
          }
         else {
-            var targets = creep.pos.findClosestByPath(Game.STRUCTURES, {
+            var targets = creep.room.find(Game.STRUCTURES, {
                 filter: function(structure) {
                     return structure.hits < structure.hitsMax / 2;
                 }
