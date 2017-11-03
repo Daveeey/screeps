@@ -15,8 +15,11 @@ var roleRepair = {
         }
         if(!creep.memory.repairing) {
             var source = creep.pos.findClosestByPath(FIND_SOURCES);
+            console.log('Found to source');
+            console.log(source);
             if(source == ERR_NOT_IN_RANGE) {
                 creep.moveTo(source, {visualizePathStyle: {stroke: '#ffaa00'}});
+                console.log('Moving to source');
             }
         }
         else {
