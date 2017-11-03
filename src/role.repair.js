@@ -39,9 +39,14 @@ var roleRepair = {
             //targets.sort((a,b) => a.hits - b.hits);
 
             if(targets.length > 0) {
+                console.log('found targets');
                 if(creep.repair(targets[0]) == ERR_NOT_IN_RANGE) {
+                    console.log('Moving to target' + targets[0]);
                     creep.moveTo(targets[0]);
                 }
+            } else {
+                console.log('No Targets');
+                console.log(targets);
             }
         }
     }
