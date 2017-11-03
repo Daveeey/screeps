@@ -14,13 +14,18 @@ var roleRepair = {
             creep.say('repairing');
         }
         if(!creep.memory.repairing) {
-            var sources = creep.room.find(FIND_SOURCES);
-            if(creep.harvest(sources[1]) == ERR_NOT_IN_RANGE) {
-                creep.moveTo(sources[1], {visualizePathStyle: {stroke: '#ffaa00'}});
+            var EnergyStructures = creep.pos.findClosestByPath(FIND_STRUCTURES, {
+                    filter: (s) => (s.structureType == STRUCTURE_SPAWN
+                || s.structureType == STRUCTURE_EXTENSION)
+                && s.energy < s.energyCapacity
+            })
+                if(creep.transfer(EnergyStructures) == ERR_NOT_IN_RANGE) {
+                    creep.moveTo(EnergyStructures, {visualizePathStyle: {stroke: '#ffaa00'}})
+                }
             }
         }
         else {
-            const targets = creep.room.find(FIND_STRUCTURES, {
+            var targets = creep.room.find(FIND_STRUCTURES, {
                     filter: object => object.hits < object.hitsMax
             });
 
