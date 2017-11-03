@@ -14,13 +14,13 @@ var roleRepair = {
             creep.say('repairing');
         }
         if(!creep.memory.repairing) {
-            var source = creep.pos.findNearest(Game.SOURCES_ACTIVE);
+            var source = creep.pos.findClosestByPath(FIND_SOURCES);
             if(source == ERR_NOT_IN_RANGE) {
                 creep.moveTo(source, {visualizePathStyle: {stroke: '#ffaa00'}});
             }
         }
         else {
-            var targets = creep.pos.findNearest(Game.STRUCTURES, {
+            var targets = creep.pos.findClosestByPath(Game.STRUCTURES, {
                 filter: function(structure) {
                     return structure.hits < structure.hitsMax / 2;
                 }
