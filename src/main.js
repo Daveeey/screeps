@@ -33,7 +33,7 @@ module.exports.loop = function () {
     
     if(Game.spawns['Spawn1'].energy === Game.spawns['Spawn1'].energyCapacity && !Game.spawns['Spawn1'].spawning){
         // We can build a new unit - we decide based on priority
-        if(creepCount['harvester'] < 3){
+        if(creepCount['harvester'] < 4){
             Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Harvester' + Game.time, {memory: {role: 'harvester'}});
             console.log('Created new Harvester ');
            
