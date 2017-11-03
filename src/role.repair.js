@@ -47,6 +47,7 @@ var roleRepair = {
             } else {
                 console.log('No Targets');
                 console.log(targets);
+                creep.moveTo(Game.spawns['Spawn1']);
             }
         }
     }
