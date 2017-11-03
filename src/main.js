@@ -8,6 +8,7 @@ module.exports.loop = function () {
 	creepCount['harvester'] = 0;
 	creepCount['upgrader'] = 0;
 	creepCount['builder'] = 0;
+    creepCount['repair'] = 0;
 	
     for(var name in Memory.creeps) {
         if(!Game.creeps[name]) {
