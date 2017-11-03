@@ -30,12 +30,12 @@ var roleRepair = {
              }
          }
         else {
-            var targets = creep.room.find(Game.STRUCTURES, {
-                filter: function(structure) {
-                    return structure.hits < structure.hitsMax;
-                }
-            });
-
+            // var targets = creep.room.find(Game.STRUCTURES, {
+            //     filter: function(structure) {
+            //         return structure.hits < structure.hitsMax;
+            //     }
+            // });
+             var targets = creep.room.find(Game.STRUCTURES);
             targets.sort((a,b) => a.hits - b.hits);
 
             if(targets.length > 0) {
