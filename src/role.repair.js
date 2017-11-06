@@ -3,18 +3,16 @@ var roleRepair = {
     /** @param {Creep} creep **/
     run: function(creep) {
 
-
-        if(creep.carry.energy == 0 && !creep.memory.harvesting) {
+        if(creep.memory.repairing && creep.carry.energy == 0) {
             creep.memory.repairing = false;
-            creep.memory.harvesting = true;
             creep.say('harvest');
         }
 
         if(!creep.memory.repairing && creep.carry.energy == creep.carryCapacity) {
             creep.memory.repairing = true;
-            creep.memory.harvesting = false;
-            creep.say('repairing');
+            creep.say('repair');
         }
+
         // if(!creep.memory.repairing) {
         //     var source = creep.pos.findClosestByPath(FIND_SOURCES);
         //     console.log(source);
@@ -23,7 +21,7 @@ var roleRepair = {
         //         console.log('Moving to source');
         //     }
         // }
-         if(!creep.memory.repairing) {
+        if(!creep.memory.repairing) {
              var source = creep.room.find(FIND_SOURCES);
              if(creep.harvest(source[1]) == ERR_NOT_IN_RANGE) {
                  creep.moveTo(source[1], {visualizePathStyle: {stroke: '#ffaa00'}});
