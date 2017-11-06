@@ -37,25 +37,24 @@ module.exports.loop = function () {
     }
     
     if(Game.spawns['Spawn1'].energy === Game.spawns['Spawn1'].energyCapacity && !Game.spawns['Spawn1'].spawning){
-        // We can build a new unit - we decide based on priority
-        // if(creepCount['repair'] < 1){
-        //     Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Repair' + Game.time, {memory: {role: 'repair'}});
-        //     console.log('Created new Repairer ');
-        //
-        // }
-        if(creepCount['harvester'] < 4){
-            Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Harvester' + Game.time, {memory: {role: 'harvester'}});
-            console.log('Created new Harvester ');
-           
+        if(creepCount['harvester'] < 2){
+            if(Game.spawns['Spawn1'].spawnCreep([WORK,WORK,CARRY,MOVE], 'Harvester' + Game.time, {memory: {role: 'harvester'}})){
+                console.log('Created new Harvester ');
+            }
         }
-        else if(creepCount['upgrader'] < 2){
+        else if(creepCount['upgrader'] < 1){
             Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Upgrader' + Game.time, {memory: {role: 'upgrader', upgrading: false}});
-            console.log('Created new Builder ');
+            console.log('Created new Upgrader ');
            
         }
-        else if(creepCount['builder'] < 4){
+        else if(creepCount['repairer'] < 1){
+            Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE,MOVE], 'Repairer' + Game.time, {memory: {role: 'repairer'}});
+            console.log('Created new Repairer ');
+
+        }
+        else if(creepCount['builder'] < 1){
             Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Builder' + Game.time, {memory: {role: 'builder'}});
-            console.log('Created new Upgrader ');
+            console.log('Created new Builder ');
             
         }
     }

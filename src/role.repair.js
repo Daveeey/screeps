@@ -25,27 +25,22 @@ var roleRepair = {
         // }
          if(!creep.memory.repairing) {
              var source = creep.room.find(FIND_SOURCES);
-             if(creep.harvest(source[0]) == ERR_NOT_IN_RANGE) {
-                 creep.moveTo(source[0], {visualizePathStyle: {stroke: '#ffaa00'}});
+             if(creep.harvest(source[1]) == ERR_NOT_IN_RANGE) {
+                 creep.moveTo(source[1], {visualizePathStyle: {stroke: '#ffaa00'}});
              }
          }
         else {
-             var targets = creep.room.find(Game.STRUCTURES, {
-                 filter: function(structure) {
-                     return structure.hits < structure.hitsMax;
-                 }
+             const targets = creep.room.find(FIND_STRUCTURES, {
+                 filter: object => object.hits < object.hitsMax
              });
 
-            if(targets.length > 0) {
-                console.log('found targets');
-                if(creep.repair(targets[0]) == ERR_NOT_IN_RANGE) {
-                    console.log('Moving to target' + targets[0]);
-                    creep.moveTo(targets[0]);
-                }
-            } else {
-                console.log('No Targets');
-                console.log(targets);
-            }
+             targets.sort((a,b) => a.hits - b.hits);
+
+             if(targets.length > 0) {
+                 if(creep.repair(targets[0]) == ERR_NOT_IN_RANGE) {
+                     creep.moveTo(targets[0]);
+                 }
+             }
         }
     }
 };
