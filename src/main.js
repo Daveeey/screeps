@@ -52,7 +52,7 @@ module.exports.loop = function () {
             console.log('Created new Repairer ');
 
         }
-        else if(creepCount['builder'] < 2){
+        else if(creepCount['builder'] < 3){
             const targets = creep.room.find(FIND_CONSTRUCTION_SITES);
             if(targets.length) {
                 // Only if there is something to build!
