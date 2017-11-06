@@ -8,7 +8,7 @@ module.exports.loop = function () {
 	creepCount['harvester'] = 0;
 	creepCount['upgrader'] = 0;
 	creepCount['builder'] = 0;
-    creepCount['repair'] = 0;
+    creepCount['repairer'] = 0;
 	
     for(var name in Memory.creeps) {
         if(!Game.creeps[name]) {
@@ -31,7 +31,7 @@ module.exports.loop = function () {
         if(creep.memory.role == 'builder') {
             roleBuilder.run(creep);
         }
-        if(creep.memory.role == 'repair') {
+        if(creep.memory.role == 'repairer') {
             roleRepair.run(creep);
         }
     }
