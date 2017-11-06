@@ -37,7 +37,7 @@ module.exports.loop = function () {
     }
     
     if(Game.spawns['Spawn1'].energy === Game.spawns['Spawn1'].energyCapacity && !Game.spawns['Spawn1'].spawning){
-        if(creepCount['harvester'] < 2){
+        if(creepCount['harvester'] < 3){
             if(Game.spawns['Spawn1'].spawnCreep([WORK,WORK,CARRY,MOVE], 'Harvester' + Game.time, {memory: {role: 'harvester'}})){
                 console.log('Created new Harvester ');
             }
@@ -52,7 +52,7 @@ module.exports.loop = function () {
             console.log('Created new Repairer ');
 
         }
-        else if(creepCount['builder'] < 5){
+        else if(creepCount['builder'] < 3){
             const targets = creep.room.find(FIND_CONSTRUCTION_SITES);
             if(targets.length) {
                 // Only if there is something to build!
