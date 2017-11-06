@@ -48,12 +48,12 @@ module.exports.loop = function () {
            
         }
         else if(creepCount['repairer'] < 1){
-            Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE,MOVE], 'Repairer' + Game.time, {memory: {role: 'repairer'}});
+            Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE,MOVE], 'Repairer' + Game.time, {memory: {role: 'repairer', repairing: false}});
             console.log('Created new Repairer ');
 
         }
         else if(creepCount['builder'] < 1){
-            Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Builder' + Game.time, {memory: {role: 'builder'}});
+            Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Builder' + Game.time, {memory: {role: 'builder', building: false}});
             console.log('Created new Builder ');
             
         }
