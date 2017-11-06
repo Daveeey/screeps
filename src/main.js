@@ -42,20 +42,23 @@ module.exports.loop = function () {
                 console.log('Created new Harvester ');
             }
         }
-        else if(creepCount['upgrader'] < 1){
+        else if(creepCount['upgrader'] < 2){
             Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Upgrader' + Game.time, {memory: {role: 'upgrader', upgrading: false}});
             console.log('Created new Upgrader ');
            
         }
-        else if(creepCount['repairer'] < 1){
+        else if(creepCount['repairer'] < 2){
             Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE,MOVE], 'Repairer' + Game.time, {memory: {role: 'repairer', repairing: false}});
             console.log('Created new Repairer ');
 
         }
         else if(creepCount['builder'] < 1){
-            Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Builder' + Game.time, {memory: {role: 'builder', building: false}});
-            console.log('Created new Builder ');
-            
+            const targets = creep.room.find(FIND_CONSTRUCTION_SITES);
+            if(targets.length) {
+                // Only if there is something to build!
+                Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Builder' + Game.time, {memory: {role: 'builder', building: false}});
+                console.log('Created new Builder ');
+            }
         }
     }
     
