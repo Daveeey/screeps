@@ -1,5 +1,6 @@
 Todo List:
 
+1) Set priority system for Repair, Build using Memory
 1) Create Memory.lastAssignedSource to hold the last assigned source for harvesters to determine the best one to go to to reduce queue.
 2) Set Harvesters to drop resources into containers and create runners to transport this to the spawn, this gives more sources for builders and repairers to collect from and reduces queue.
 3) Set 4 Harvesters (2 at each source at any time)
