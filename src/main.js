@@ -53,11 +53,11 @@ module.exports.loop = function () {
                 console.log('Spawning new Harvester ');
             }
         }
-        else if(creepCount['runner'] < 3){
-            Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Runner' + Game.time, {memory: {role: 'runner', upgrading: false}});
-            console.log('Spawning new Runner ');
-
-        }
+        //else if(creepCount['runner'] < 3){
+        //    Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Runner' + Game.time, {memory: {role: 'runner', upgrading: false}});
+        //    console.log('Spawning new Runner ');
+        //
+        //}
         else if(creepCount['upgrader'] < 2){
             Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Upgrader' + Game.time, {memory: {role: 'upgrader', upgrading: false}});
             console.log('Spawning new Upgrader ');
