@@ -10,8 +10,8 @@ var roleRunner = {
                 }
             });
             if(targets.length > 0) {
-                if (creep.withdraw(storage, RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
-                    creep.moveTo(storage);
+                if (creep.withdraw(targets[0], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
+                    creep.moveTo(targets[0]);
                 }
             } else {
                 creep.moveTo(Game.flags.Runner);
