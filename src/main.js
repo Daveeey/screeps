@@ -2,6 +2,7 @@ var roleHarvester = require('role.harvester');
 var roleUpgrader = require('role.upgrader');
 var roleBuilder = require('role.builder');
 var roleRepair = require('role.repair');
+var roleRunner = require('role.runner');
 
 module.exports.loop = function () {
     var creepCount = new Array();
@@ -34,6 +35,9 @@ module.exports.loop = function () {
         if(creep.memory.role == 'repairer') {
             roleRepair.run(creep);
         }
+        if(creep.memory.role == 'runner') {
+            roleRunner.run(creep);
+        }
     }
     
     if(Game.spawns['Spawn1'].energy === Game.spawns['Spawn1'].energyCapacity && !Game.spawns['Spawn1'].spawning){
@@ -41,6 +45,11 @@ module.exports.loop = function () {
             if(Game.spawns['Spawn1'].spawnCreep([WORK,WORK,CARRY,CARRY,MOVE], 'Harvester' + Game.time, {memory: {role: 'harvester'}})){
                 console.log('Spawning new Harvester ');
             }
+        }
+        else if(creepCount['upgrader'] < 3){
+            Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Runner' + Game.time, {memory: {role: 'runner', upgrading: false}});
+            console.log('Spawning new Runner ');
+
         }
         else if(creepCount['upgrader'] < 2){
             Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Upgrader' + Game.time, {memory: {role: 'upgrader', upgrading: false}});
