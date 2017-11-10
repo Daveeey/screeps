@@ -16,16 +16,11 @@ var roleHarvester = {
                     }
             });
             if(targets.length > 0) {
-                for(var id in targets){
-                    if(targets[id].energy < targets[id].energyCapacity){
-                        if(creep.transfer(targets[id], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
-                            creep.moveTo(targets[id], {visualizePathStyle: {stroke: '#ffffff'}});
-                        }
-                    } else {
-                        creep.moveTo(Game.flags.HarvesterHoldingStation);
-                    }
+                if(creep.transfer(targets[0], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
+                    creep.moveTo(targets[0], {visualizePathStyle: {stroke: '#ffffff'}});
                 }
-
+            } else {
+                creep.moveTo(Game.flags.HarvesterHoldingStation);
             }
         }
 	}
