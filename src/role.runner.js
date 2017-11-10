@@ -6,7 +6,7 @@ var roleRunner = {
             var targets = creep.room.find(FIND_STRUCTURES, {
                 filter: (structure) => {
                     return (structure.structureType == STRUCTURE_CONTAINER) &&
-                        structure.store.energy < structure.storeCapacity;
+                        structure.store.energy <= creep.carryCapacity;
                 }
             });
             if(targets.length > 0) {
