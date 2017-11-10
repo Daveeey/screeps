@@ -13,7 +13,7 @@ module.exports.loop = function () {
     for(var name in Memory.creeps) {
         if(!Game.creeps[name]) {
             delete Memory.creeps[name];
-            console.log('Clearing non-existing creep memory:', name);
+            // Clear memory
         } else {
 			var creep = Game.creeps[name];
 			creepCount[creep.memory.role]++;
@@ -37,19 +37,19 @@ module.exports.loop = function () {
     }
     
     if(Game.spawns['Spawn1'].energy === Game.spawns['Spawn1'].energyCapacity && !Game.spawns['Spawn1'].spawning){
-        if(creepCount['harvester'] < 3){
+        if(creepCount['harvester'] < 4){
             if(Game.spawns['Spawn1'].spawnCreep([WORK,WORK,CARRY,CARRY,MOVE], 'Harvester' + Game.time, {memory: {role: 'harvester'}})){
-                console.log('Created new Harvester ');
+                console.log('Spawning new Harvester ');
             }
         }
         else if(creepCount['upgrader'] < 2){
             Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Upgrader' + Game.time, {memory: {role: 'upgrader', upgrading: false}});
-            console.log('Created new Upgrader ');
+            console.log('Spawning new Upgrader ');
            
         }
         else if(creepCount['repairer'] < 2){
             Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE,MOVE], 'Repairer' + Game.time, {memory: {role: 'repairer', repairing: false}});
-            console.log('Created new Repairer ');
+            console.log('Spawning new Repairer ');
 
         }
         else if(creepCount['builder'] < 3){
@@ -57,7 +57,7 @@ module.exports.loop = function () {
             if(targets.length) {
                 // Only if there is something to build!
                 Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Builder' + Game.time, {memory: {role: 'builder', building: false}});
-                console.log('Created new Builder ');
+                console.log('Spawning new Builder ');
             }
         }
     }
