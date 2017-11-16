@@ -48,7 +48,7 @@ module.exports.loop = function () {
     }
     
     if(Game.spawns['Spawn1'].energy === Game.spawns['Spawn1'].energyCapacity && !Game.spawns['Spawn1'].spawning){
-        if(creepCount['harvester'] < 4){
+        if(creepCount['harvester'] < 3){
             if(Game.spawns['Spawn1'].spawnCreep([WORK,WORK,CARRY,CARRY,MOVE], 'Harvester' + Game.time, {memory: {role: 'harvester'}})){
                 console.log('Spawning new Harvester ');
             }
@@ -58,7 +58,7 @@ module.exports.loop = function () {
         //    console.log('Spawning new Runner ');
         //
         //}
-        else if(creepCount['upgrader'] < 4){
+        else if(creepCount['upgrader'] < 3){
             Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Upgrader' + Game.time, {memory: {role: 'upgrader', upgrading: false}});
             console.log('Spawning new Upgrader ');
         }
