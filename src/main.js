@@ -59,19 +59,22 @@ module.exports.loop = function () {
         //
         //}
         else if(creepCount['upgrader'] < 3){
-            Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Upgrader' + Game.time, {memory: {role: 'upgrader', upgrading: false}});
-            console.log('Spawning new Upgrader ');
+            if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Upgrader' + Game.time, {memory: {role: 'upgrader', upgrading: false}})){
+                console.log('Spawning new Upgrader ');
+            }
         }
         else if(creepCount['repairer'] < 2){
-            Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE,MOVE], 'Repairer' + Game.time, {memory: {role: 'repairer', repairing: false}});
-            console.log('Spawning new Repairer ');
+            if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE,MOVE], 'Repairer' + Game.time, {memory: {role: 'repairer', repairing: false}})){
+                console.log('Spawning new Repairer ');
+            }
         }
         else if(creepCount['builder'] < 3){
             const targets = creep.room.find(FIND_CONSTRUCTION_SITES);
             if(targets.length) {
                 // Only if there is something to build!
-                Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Builder' + Game.time, {memory: {role: 'builder', building: false}});
-                console.log('Spawning new Builder ');
+                if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Builder' + Game.time, {memory: {role: 'builder', building: false}})){
+                    console.log('Spawning new Builder ');
+                }
             }
         }
     }
