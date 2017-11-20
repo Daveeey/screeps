@@ -47,7 +47,7 @@ module.exports.loop = function () {
         }
     }
     
-    if(Game.spawns['Spawn1'].energy === Game.spawns['Spawn1'].energyCapacity && !Game.spawns['Spawn1'].spawning){
+    if(!Game.spawns['Spawn1'].spawning){
         if(creepCount['harvester'] < 3){
             if(Game.spawns['Spawn1'].spawnCreep([WORK,WORK,CARRY,CARRY,MOVE], 'Harvester' + Game.time, {memory: {role: 'harvester'}})){
                 console.log('Spawning new Harvester ');
