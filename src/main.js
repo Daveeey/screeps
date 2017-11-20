@@ -50,7 +50,7 @@ module.exports.loop = function () {
     if(!Game.spawns['Spawn1'].spawning){
         if(creepCount['harvester'] < 3){
             if(Game.spawns['Spawn1'].spawnCreep([WORK,WORK,CARRY,CARRY,MOVE], 'Harvester' + Game.time, {memory: {role: 'harvester'}})){
-                console.log('Spawning new Harvester ');
+                //console.log('Spawning new Harvester ');
             }
         }
         //else if(creepCount['runner'] < 3){
@@ -60,12 +60,12 @@ module.exports.loop = function () {
         //}
         else if(creepCount['upgrader'] < 3){
             if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Upgrader' + Game.time, {memory: {role: 'upgrader', upgrading: false}})){
-                console.log('Spawning new Upgrader ');
+                //console.log('Spawning new Upgrader ');
             }
         }
         else if(creepCount['repairer'] < 2){
             if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE,MOVE], 'Repairer' + Game.time, {memory: {role: 'repairer', repairing: false}})){
-                console.log('Spawning new Repairer ');
+                //console.log('Spawning new Repairer ');
             }
         }
         else if(creepCount['builder'] < 3){
@@ -73,10 +73,10 @@ module.exports.loop = function () {
             if(targets.length) {
                 // Only if there is something to build!
                 if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Builder' + Game.time, {memory: {role: 'builder', building: false}})){
-                    console.log('Spawning new Builder ');
+                    //console.log('Spawning new Builder ');
                 }
             }
         }
     }
     
-}
+};
