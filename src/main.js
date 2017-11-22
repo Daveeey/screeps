@@ -48,8 +48,8 @@ module.exports.loop = function () {
     }
     
     if(!Game.spawns['Spawn1'].spawning){
-        if(creepCount['harvester'] < 3){
-            if(Game.spawns['Spawn1'].spawnCreep([WORK,WORK,CARRY,CARRY,MOVE], 'Harvester' + Game.time, {memory: {role: 'harvester'}})){
+        if(creepCount['harvester'] < 4){
+            if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,CARRY,MOVE], 'Harvester' + Game.time, {memory: {role: 'harvester'}})){
                 //console.log('Spawning new Harvester ');
             }
         }
@@ -64,7 +64,7 @@ module.exports.loop = function () {
             }
         }
         else if(creepCount['repairer'] < 2){
-            if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE,MOVE], 'Repairer' + Game.time, {memory: {role: 'repairer', repairing: false}})){
+            if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Repairer' + Game.time, {memory: {role: 'repairer', repairing: false}})){
                 //console.log('Spawning new Repairer ');
             }
         }
