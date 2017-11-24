@@ -58,7 +58,7 @@ module.exports.loop = function () {
         //    console.log('Spawning new Runner ');
         //
         //}
-        else if(creepCount['upgrader'] < 3){
+        else if(creepCount['upgrader'] < 2){
             if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Upgrader' + Game.time, {memory: {role: 'upgrader', upgrading: false}})){
                 //console.log('Spawning new Upgrader ');
             }
