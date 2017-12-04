@@ -87,7 +87,5 @@ module.exports.loop = function () {
             var towers = Game.rooms[creep.room.name].find(
                 FIND_MY_STRUCTURES, {filter: {structureType: STRUCTURE_TOWER}});
             towers.forEach(tower => tower.attack(hostiles[0]));
-        } else {
-            console.log(Game.rooms[creep.room.name]);
         }
 };
