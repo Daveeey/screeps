@@ -89,9 +89,4 @@ module.exports.loop = function () {
             Game.notify('User ' +  username + ' spotted and engaged!');
         }
 
-    this.testing();
-};
-
-module.exports.testing = function (){
-    console.log('This is a test');
 };
