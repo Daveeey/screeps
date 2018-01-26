@@ -1,7 +1,7 @@
 var spawnModel = {
 
     /** @param {Creep} creep **/
-    run: function() {
+    run: function(creepCount) {
         if(creepCount['harvester'] < 4){
             if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,CARRY,MOVE], 'Harvester' + Game.time, {memory: {role: 'harvester'}})){
                 //console.log('Spawning new Harvester ');
