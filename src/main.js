@@ -6,8 +6,10 @@ var roleRunner = require('role.runner');
 
 var spawnModel = require('spawns');
 
+
+var creepCount = new Array();
+
 module.exports.loop = function () {
-    var creepCount = new Array();
 	creepCount['harvester'] = 0;
 	creepCount['upgrader'] = 0;
 	creepCount['builder'] = 0;
