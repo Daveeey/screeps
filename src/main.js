@@ -88,4 +88,10 @@ module.exports.loop = function () {
             towers.forEach(tower => tower.attack(hostiles[0]));
             Game.notify('User ' +  username + ' spotted and engaged!');
         }
+
+    this.testing();
+};
+
+module.exports.testing = function (){
+    console.log('This is a test');
 };
