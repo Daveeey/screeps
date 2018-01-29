@@ -1,7 +1,7 @@
 var spawnModel = {
 
     /** @param {Creep} creep **/
-    run: function(creepCount) {
+    run: function(creepCount, creeo) {
         if(creepCount['harvester'] < 4){
             if(Game.spawns['Spawn1'].spawnCreep([WORK,WORK,CARRY,MOVE], 'Harvester' + Game.time, {memory: {role: 'harvester'}})){
                 //console.log('Spawning new Harvester ');
@@ -23,7 +23,7 @@ var spawnModel = {
             }
         }
         else if(creepCount['builder'] < 2){
-            const targets = creep.room.find(FIND_CONSTRUCTION_SITES);
+            const targets = Game.rooms['W74N21'].find(FIND_CONSTRUCTION_SITES);
             if(targets.length) {
                 // Only if there is something to build!
                 if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Builder' + Game.time, {memory: {role: 'builder', building: false}})){
