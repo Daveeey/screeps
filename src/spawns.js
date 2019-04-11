@@ -23,7 +23,7 @@ var spawnModel = {
             }
         }
         else if(creepCount['builder'] < 2){
-            const targets = Game.rooms['W74N21'].find(FIND_CONSTRUCTION_SITES);
+            const targets = Game.rooms['W29N26'].find(FIND_CONSTRUCTION_SITES);
             if(targets.length) {
                 // Only if there is something to build!
                 if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Builder' + Game.time, {memory: {role: 'builder', building: false}})){
