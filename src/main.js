@@ -56,10 +56,10 @@ module.exports.loop = function () {
     }
 
     // Room Defense Basic
-    //     var hostiles = Game.rooms['W29N26'].find(FIND_HOSTILE_CREEPS);
+    //     var hostiles = Game.rooms['W9N28'].find(FIND_HOSTILE_CREEPS);
     //     if(hostiles.length > 0) {
     //         var username = hostiles[0].owner.username;
-    //         var towers = Game.rooms['W29N26'].find(
+    //         var towers = Game.rooms['W9N28'].find(
     //             FIND_MY_STRUCTURES, {filter: {structureType: STRUCTURE_TOWER}});
     //         towers.forEach(tower => tower.attack(hostiles[0]));
     //         Game.notify('User ' +  username + ' spotted and engaged!');
