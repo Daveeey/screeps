@@ -26,11 +26,11 @@ var spawnModel = {
                 }
             }
         }
-         else if(creepCount['repairer'] < 1){
-             if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Repairer' + Game.time, {memory: {role: 'repairer', repairing: false}})){
-                 console.log('Spawning new Repairer ');
-             }
-         }
+         // else if(creepCount['repairer'] < 1){
+         //     if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Repairer' + Game.time, {memory: {role: 'repairer', repairing: false}})){
+         //         console.log('Spawning new Repairer ');
+         //     }
+         // }
     }
 };
 
