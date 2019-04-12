@@ -17,11 +17,6 @@ var spawnModel = {
                 //console.log('Spawning new Upgrader ');
             }
         }
-        else if(creepCount['repairer'] < 2){
-            if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Repairer' + Game.time, {memory: {role: 'repairer', repairing: false}})){
-                //console.log('Spawning new Repairer ');
-            }
-        }
         else if(creepCount['builder'] < 2){
             const targets = Game.rooms['W9N28'].find(FIND_CONSTRUCTION_SITES);
             if(targets.length) {
@@ -29,6 +24,11 @@ var spawnModel = {
                 if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Builder' + Game.time, {memory: {role: 'builder', building: false}})){
                     //console.log('Spawning new Builder ');
                 }
+            }
+        }
+        else if(creepCount['repairer'] < 2){
+            if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Repairer' + Game.time, {memory: {role: 'repairer', repairing: false}})){
+                //console.log('Spawning new Repairer ');
             }
         }
     }
