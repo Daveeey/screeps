@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="16fcc592-c476-454a-af5c-d52564ed6c8d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/role.builder.js" afterPath="$PROJECT_DIR$/src/role.builder.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/spawns.js" afterPath="$PROJECT_DIR$/src/spawns.js" />
     </list>
     <ignored path="screeps.iws" />
@@ -29,7 +30,37 @@
         <entry file="file://$PROJECT_DIR$/src/spawns.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="70" selection-start-line="5" selection-start-column="70" selection-end-line="5" selection-end-column="70" />
+              <caret line="5" column="80" selection-start-line="5" selection-start-column="80" selection-end-line="5" selection-end-column="80" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="role.harvester.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/role.harvester.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="64" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Todo.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Todo.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="role.builder.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/role.builder.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -43,10 +74,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/role.builder.js" />
         <option value="$PROJECT_DIR$/src/role.repair.js" />
         <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/role.harvester.js" />
+        <option value="$PROJECT_DIR$/src/role.builder.js" />
         <option value="$PROJECT_DIR$/src/spawns.js" />
       </list>
     </option>
@@ -194,12 +225,12 @@
       <workItem from="1555060857816" duration="52000" />
       <workItem from="1555062731166" duration="288000" />
       <workItem from="1555067766630" duration="724000" />
-      <workItem from="1555068982501" duration="743000" />
+      <workItem from="1555068982501" duration="1589000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3340000" />
+    <option name="totallyTimeSpent" value="4186000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -375,25 +406,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/role.builder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/role.repair.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/role.harvester.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="77" selection-start-line="25" selection-start-column="77" selection-end-line="25" selection-end-column="77" />
           <folding />
         </state>
       </provider>
@@ -406,10 +422,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/role.builder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Todo.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/role.harvester.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="64" selection-start-line="22" selection-start-column="64" selection-end-line="22" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/spawns.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="70" selection-start-line="5" selection-start-column="70" selection-end-line="5" selection-end-column="70" />
+          <caret line="5" column="80" selection-start-line="5" selection-start-column="80" selection-end-line="5" selection-end-column="80" />
           <folding />
         </state>
       </provider>
