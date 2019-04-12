@@ -43,7 +43,12 @@ module.exports.loop = function () {
             roleRepair.run(creep);
         }
         if(creep.memory.role == 'runner') {
-            roleRunner.run(creep);
+            // roleRunner.run(creep);
+            if(creep.room.controller) {
+                if(creep.signController(creep.room.controller, "Method's Mansion!") == ERR_NOT_IN_RANGE) {
+                    creep.moveTo(creep.room.controller);
+                }
+            }
         }
 
     }

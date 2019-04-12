@@ -4,17 +4,17 @@ var spawnModel = {
     run: function(creepCount, creeo) {
         if(creepCount['harvester'] < 2){
             if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Harvester' + Game.time, {memory: {role: 'harvester'}})){
-                //console.log('Spawning new Harvester ');
+                console.log('Spawning new Harvester ');
             }
         }
-        //else if(creepCount['runner'] < 3){
-        //    Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Runner' + Game.time, {memory: {role: 'runner', upgrading: false}});
-        //    console.log('Spawning new Runner ');
-        //
-        //}
+        else if(creepCount['runner'] < 1){
+            Game.spawns['Spawn1'].spawnCreep([MOVE,MOVE,MOVE], 'Runner' + Game.time, {memory: {role: 'runner', upgrading: false}});
+            console.log('Spawning new Runner ');
+
+        }
         else if(creepCount['upgrader'] < 1){
             if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Upgrader' + Game.time, {memory: {role: 'upgrader', upgrading: false}})){
-                //console.log('Spawning new Upgrader ');
+                console.log('Spawning new Upgrader ');
             }
         }
         else if(creepCount['builder'] < 2){
@@ -22,13 +22,13 @@ var spawnModel = {
             if(targets.length) {
                 // Only if there is something to build!
                 if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Builder' + Game.time, {memory: {role: 'builder', building: false}})){
-                    //console.log('Spawning new Builder ');
+                    console.log('Spawning new Builder ');
                 }
             }
         }
          else if(creepCount['repairer'] < 1){
              if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Repairer' + Game.time, {memory: {role: 'repairer', repairing: false}})){
-                 //console.log('Spawning new Repairer ');
+                 console.log('Spawning new Repairer ');
              }
          }
     }
