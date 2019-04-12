@@ -12,7 +12,7 @@ var spawnModel = {
         //     console.log('Spawning new Runner ');
         //
         // }
-        else if(creepCount['upgrader'] < 1 && Game.rooms['W9N28'].energyAvailable >= 300){
+        else if(creepCount['upgrader'] < 2 && Game.rooms['W9N28'].energyAvailable >= 300){
             if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE,MOVE,MOVE], 'Upgrader' + Game.time, {memory: {role: 'upgrader', upgrading: false}})){
                 console.log('Spawning new Upgrader ');
             }
