@@ -3,7 +3,7 @@ var spawnModel = {
     /** @param {Creep} creep **/
     run: function(creepCount, creeo) {
         if(creepCount['harvester'] < 2){
-            if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Harvester' + Game.time, {memory: {role: 'harvester'}})){
+            if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,CARRY,MOVE,MOVE], 'Harvester' + Game.time, {memory: {role: 'harvester'}})){
                 console.log('Spawning new Harvester ');
             }
         }
@@ -13,7 +13,7 @@ var spawnModel = {
 
         }
         else if(creepCount['upgrader'] < 1){
-            if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Upgrader' + Game.time, {memory: {role: 'upgrader', upgrading: false}})){
+            if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE,MOVE,MOVE], 'Upgrader' + Game.time, {memory: {role: 'upgrader', upgrading: false}})){
                 console.log('Spawning new Upgrader ');
             }
         }
@@ -21,7 +21,7 @@ var spawnModel = {
             const targets = Game.rooms['W9N28'].find(FIND_CONSTRUCTION_SITES);
             if(targets.length) {
                 // Only if there is something to build!
-                if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Builder' + Game.time, {memory: {role: 'builder', building: false}})){
+                if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,CARRY,MOVE,MOVE], 'Builder' + Game.time, {memory: {role: 'builder', building: false}})){
                     console.log('Spawning new Builder ');
                 }
             }
