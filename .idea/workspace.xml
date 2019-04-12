@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16fcc592-c476-454a-af5c-d52564ed6c8d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.js" afterPath="$PROJECT_DIR$/src/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/spawns.js" afterPath="$PROJECT_DIR$/src/spawns.js" />
-    </list>
+    <list default="true" id="16fcc592-c476-454a-af5c-d52564ed6c8d" name="Default" comment="" />
     <ignored path="screeps.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -30,7 +26,7 @@
         <entry file="file://$PROJECT_DIR$/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="612">
-              <caret line="48" column="251" selection-start-line="48" selection-start-column="251" selection-end-line="48" selection-end-column="251" />
+              <caret line="48" column="3" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -235,12 +231,12 @@
       <workItem from="1555060857816" duration="52000" />
       <workItem from="1555062731166" duration="288000" />
       <workItem from="1555067766630" duration="724000" />
-      <workItem from="1555068982501" duration="1931000" />
+      <workItem from="1555068982501" duration="1982000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4528000" />
+    <option name="totallyTimeSpent" value="4579000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -459,7 +455,7 @@
     <entry file="file://$PROJECT_DIR$/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
-          <caret line="48" column="251" selection-start-line="48" selection-start-column="251" selection-end-line="48" selection-end-column="251" />
+          <caret line="48" column="3" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
           <folding />
         </state>
       </provider>
