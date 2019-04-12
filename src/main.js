@@ -45,6 +45,8 @@ module.exports.loop = function () {
         if(creep.memory.role == 'runner') {
             roleRunner.run(creep);
         }
+
+        if(creep.room.controller) {     if(Game.creeps['Builder5897323'].signController(Game.creeps['Builder5897323'].room.controller, "Methods Mansion") == ERR_NOT_IN_RANGE) {         Game.creeps['Builder5897323'].moveTo(Game.creeps['Builder5897323'].room.controller);     } }
     }
     
     if(!Game.spawns['Spawn1'].spawning){
