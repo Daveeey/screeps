@@ -2,7 +2,7 @@ var spawnModel = {
 
     /** @param {Creep} creep **/
     run: function(creepCount, creeo) {
-        if(creepCount['harvester'] < 1){
+        if(creepCount['harvester'] < 2){
             if(Game.spawns['Spawn1'].spawnCreep([WORK,WORK,CARRY,MOVE], 'Harvester' + Game.time, {memory: {role: 'harvester'}})){
                 //console.log('Spawning new Harvester ');
             }
@@ -26,12 +26,11 @@ var spawnModel = {
                 }
             }
         }
-        // Turned off repairers until the containers are setup
-        // else if(creepCount['repairer'] < 1){
-        //     if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Repairer' + Game.time, {memory: {role: 'repairer', repairing: false}})){
-        //         //console.log('Spawning new Repairer ');
-        //     }
-        // }
+         else if(creepCount['repairer'] < 1){
+             if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,MOVE], 'Repairer' + Game.time, {memory: {role: 'repairer', repairing: false}})){
+                 //console.log('Spawning new Repairer ');
+             }
+         }
     }
 };
 
