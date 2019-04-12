@@ -2,7 +2,7 @@ var spawnModel = {
 
     /** @param {Creep} creep **/
     run: function(creepCount, creeo) {
-        console.log(creepCount['havester'] + ' harvesters');
+        console.log(creepCount['harvester'] + ' harvesters');
         if(creepCount['harvester'] < 2 && Game.rooms['W9N28'].eneryAvailable >= 300){
             if(Game.spawns['Spawn1'].spawnCreep([WORK,WORK,CARRY,MOVE], 'Harvester' + Game.time, {memory: {role: 'harvester'}})){
                 console.log('Spawning new Harvester ');
