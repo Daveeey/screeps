@@ -31,11 +31,7 @@ module.exports.loop = function () {
     for(var name in Game.creeps) {
         var creep = Game.creeps[name];
         if(creep.memory.role == 'harvester') {
-            if(creepCount['runner'] > 0){
-                roleHarvester.run(creep, true);
-            } else {
-                roleHarvester.run(creep);
-            }
+            roleHarvester.run(creep);
         }
         if(creep.memory.role == 'upgrader') {
             roleUpgrader.run(creep);
