@@ -8,7 +8,7 @@ var spawnModel = {
             }
         }
         else if(creepCount['runner'] < 1 && Game.rooms['W9N28'].energyAvailable >= 300){
-             Game.spawns['Spawn1'].spawnCreep([MOVE,MOVE,MOVE], 'Runner' + Game.time, {memory: {role: 'runner', upgrading: false}});
+             Game.spawns['Spawn1'].spawnCreep([CARRY,CARRY,CARRY,MOVE,MOVE,MOVE], 'Runner' + Game.time, {memory: {role: 'runner', upgrading: false}});
              console.log('Spawning new Runner ');
 
          }
