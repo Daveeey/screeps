@@ -31,7 +31,9 @@ var roleRunner = {
                     creep.moveTo(targets[0], {visualizePathStyle: {stroke: '#ffffff'}});
                 }
             } else {
-                    creep.moveTo(Game.flags.Runner);
+                if(creep.transfer(Game.spawns['Spawn1'], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
+                    creep.moveTo(Game.spawns['Spawn1']);
+                }
             }
         }
     }
