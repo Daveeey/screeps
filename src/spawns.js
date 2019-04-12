@@ -34,4 +34,4 @@ var spawnModel = {
     }
 };
 
-module.exports = spawnModel; 
+module.exports = spawnModel;
