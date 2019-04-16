@@ -2,6 +2,18 @@ var spawnModel = {
 
     /** @param {Creep} creep **/
     run: function(creepCount, creeo) {
+
+        // Check to see if we have need for runners
+        var needRunners = false;
+        var targets = Game.rooms['W19N45'].find(FIND_STRUCTURES, {
+                    filter: (structure) => {
+                    return (structure.structureType == STRUCTURE_CONTAINER);
+                }
+            });
+        if(targets.length > 0) {
+            needRunners = true;
+        }
+
         if(creepCount['harvester'] < 2 && Game.rooms['W19N45'].energyAvailable >= 300){
             if(Game.spawns['Spawn1'].spawnCreep([WORK,WORK,CARRY,MOVE], 'Harvester' + Game.time, {memory: {role: 'harvester'}})){
                 console.log('Spawning new Harvester ');
@@ -12,10 +24,9 @@ var spawnModel = {
                 console.log('Spawning new Upgrader ');
             }
         }
-        else if(creepCount['runner'] < 1 && Game.rooms['W19N45'].energyAvailable >= 300){
-             Game.spawns['Spawn1'].spawnCreep([CARRY,CARRY,CARRY,MOVE,MOVE,MOVE], 'Runner' + Game.time, {memory: {role: 'runner', upgrading: false}});
-             console.log('Spawning new Runner ');
-
+        else if(creepCount['runner'] < 1 && Game.rooms['W19N45'].energyAvailable >= 300 && needRunners == true){
+                Game.spawns['Spawn1'].spawnCreep([CARRY,CARRY,CARRY,MOVE,MOVE,MOVE], 'Runner' + Game.time, {memory: {role: 'runner', upgrading: false}});
+                console.log('Spawning new Runner ');
          }
         else if(creepCount['builder'] < 1 && Game.rooms['W19N45'].energyAvailable >= 300){
             const targets = Game.rooms['W19N45'].find(FIND_CONSTRUCTION_SITES);
