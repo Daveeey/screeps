@@ -14,8 +14,9 @@ var spawnModel = {
             needRunners = true;
         }
 
-        if(creepCount['harvester'] < 2 && Game.rooms['W19N45'].energyAvailable >= 300){
-            if(Game.spawns['Spawn1'].spawnCreep([WORK,WORK,CARRY,MOVE], 'Harvester' + Game.time, {memory: {role: 'harvester'}})){
+        if(creepCount['harvester'] < 2 && Game.rooms['W19N45'].energyAvailable <= Game.rooms['W19N45'].energyCapacityAvailable && Game.rooms['W19N45'].energyAvailable >= 300){
+            // Only spawn if there is somewhere to store energy harvested
+            if(Game.spawns['Spawn1'].spawnCreep([WORK,CARRY,CARRY,MOVE], 'Harvester' + Game.time, {memory: {role: 'harvester'}})){
                 console.log('Spawning new Harvester ');
             }
         }
