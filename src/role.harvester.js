@@ -33,7 +33,7 @@ var roleHarvester = {
                     }
                 } else {
                     // If can store somewhere otherwise upgrade controller
-                    if(Game.rooms['E33N41'].energyAvailable <= Game.rooms['E33N41'].energyCapacityAvailable){
+                    if(Game.spawns['Spawn1'].energy <= Game.spawns['Spawn1'].energyCapacity){
                         creep.say('Put Spawn');
                         if(creep.transfer(Game.spawns['Spawn1'], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
                             creep.moveTo(Game.spawns['Spawn1']);
