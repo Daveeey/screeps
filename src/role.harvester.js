@@ -31,8 +31,15 @@ var roleHarvester = {
                         creep.moveTo(targets[0], {visualizePathStyle: {stroke: '#ffffff'}});
                     }
                 } else {
-                    if(creep.transfer(Game.spawns['Spawn1'], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
-                        creep.moveTo(Game.spawns['Spawn1']);
+                    // If can store somewhere otherwise upgrade controller
+                    if(Game.rooms['E33N41'].energyAvailable <= Game.rooms['E33N41'].energyCapacityAvailable){
+                        if(creep.transfer(Game.spawns['Spawn1'], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
+                            creep.moveTo(Game.spawns['Spawn1']);
+                        }
+                    } else {
+                        if(creep.upgradeController(creep.room.controller) == ERR_NOT_IN_RANGE) {
+                            creep.moveTo(creep.room.controller);
+                        }
                     }
                 }
             } else {
