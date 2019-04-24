@@ -41,7 +41,7 @@ var roleHarvester = {
           }
         } else {
           // If can store somewhere otherwise upgrade controller
-          if (Game.spawns['Spawn1'].energy <= Game.spawns['Spawn1'].energyCapacity) {
+          if (Game.spawns['Spawn1'].energy < Game.spawns['Spawn1'].energyCapacity) {
             creep.say('Dist. Spawn');
 
             if (creep.transfer(Game.spawns['Spawn1'], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
