@@ -30,6 +30,8 @@ var roleHarvester = {
         });
 
         if (targets.length > 0) {
+          creep.say('Putting in Target');
+
           if (creep.transfer(targets[0], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
             creep.moveTo(targets[0], {
               visualizePathStyle: {
@@ -40,10 +42,14 @@ var roleHarvester = {
         } else {
           // If can store somewhere otherwise upgrade controller
           if (Game.rooms['E33N41'].energyAvailable <= Game.rooms['E33N41'].energyCapacityAvailable) {
+            creep.say('Putting in Spawn');
+
             if (creep.transfer(Game.spawns['Spawn1'], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
               creep.moveTo(Game.spawns['Spawn1']);
             }
           } else {
+            creep.say('Upgrade the controller');
+
             if (creep.upgradeController(creep.room.controller) == ERR_NOT_IN_RANGE) {
               creep.moveTo(creep.room.controller);
             }
@@ -72,6 +78,8 @@ var roleHarvester = {
           });
 
           if (targets.length > 0) {
+            creep.say('Putting in Target');
+
             if (creep.transfer(targets[0], RESOURCE_ENERGY) == ERR_NOT_IN_RANGE) {
               creep.moveTo(targets[0], {
                 visualizePathStyle: {
@@ -80,6 +88,8 @@ var roleHarvester = {
               });
             }
           } else {
+            creep.say('Upgrading the controller');
+
             if (creep.upgradeController(creep.room.controller) == ERR_NOT_IN_RANGE) {
               creep.moveTo(creep.room.controller);
             }
